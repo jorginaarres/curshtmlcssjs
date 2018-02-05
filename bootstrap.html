@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		 
+
+
+
+					  <style>
+				* {box-sizing: border-box;}
+				ul {list-style-type: none;}
+				body {font-family: Verdana, sans-serif;}
+
+				.month {
+				    padding: 40px 25px;
+				    width: 100%;
+				    background: #1abc9c;
+				    text-align: center;
+				}
+
+				.month ul {
+				    margin: 0;
+				    padding: 0;
+				}
+
+				.month ul li {
+				    color: white;
+				    font-size: 20px;
+				    text-transform: uppercase;
+				    letter-spacing: 3px;
+				}
+
+				.month .prev {
+				    float: left;
+				    padding-top: 10px;
+				}
+
+				.month .next {
+				    float: right;
+				    padding-top: 10px;
+				}
+
+				.weekdays {
+				    margin: 0;
+				    padding: 10px 0;
+				    background-color: #ddd;
+				}
+
+				.weekdays li {
+				    display: inline-block;
+				    width: 13.6%;
+				    color: #666;
+				    text-align: center;
+				}
+
+				.days {
+				    padding: 10px 0;
+				    background: #eee;
+				    margin: 0;
+				}
+
+				.days li {
+				    list-style-type: none;
+				    display: inline-block;
+				    width: 13.6%;
+				    text-align: center;
+				    margin-bottom: 5px;
+				    font-size:12px;
+				    color: #777;
+				}
+
+				.days li .active {
+				    padding: 5px;
+				    background: #1abc9c;
+				    color: white !important
+				}
+
+				/* Add media queries for smaller screens */
+				@media screen and (max-width:720px) {
+				    .weekdays li, .days li {width: 13.1%;}
+				}
+
+				@media screen and (max-width: 420px) {
+				    .weekdays li, .days li {width: 12.5%;}
+				    .days li .active {padding: 2px;}
+				}
+
+				@media screen and (max-width: 290px) {
+				    .weekdays li, .days li {width: 12.2%;}
+				}
+
+				aside{
+					width: 20%;
+					position: relative;
+					float: right;
+				}
+				</style>
+
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+		<header>
+			<img src="esterri.jpg" class="img-fluid" alt="Responsive image"  height="50">
+		</header>
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="#">QUÈ ÉS MILLOR?</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">GYM <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">CHOCOLATE</a>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Dropdown
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="#">Birres+</a>
+			          <a class="dropdown-item" href="#">tequila </a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="#">i gats</a>
+			        </div>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#">Disabled</a>
+			      </li>
+			    </ul>
+			    <form class="form-inline my-2 my-lg-0">
+			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    </form>
+			  </div>
+			</nav>
+
+
+			<aside>
+				<div>
+				<div class="month">      
+				  <ul>
+				    <li class="prev">&#10094;</li>
+				    <li class="next">&#10095;</li>
+				    <li>
+				      August<br>
+				      <span style="font-size:18px">2017</span>
+				    </li>
+				  </ul>
+				</div>
+
+				<ul class="weekdays">
+				  <li>Mo</li>
+				  <li>Tu</li>
+				  <li>We</li>
+				  <li>Th</li>
+				  <li>Fr</li>
+				  <li>Sa</li>
+				  <li>Su</li>
+				</ul>
+
+				<ul class="days">  
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				  <li>4</li>
+				  <li>5</li>
+				  <li>6</li>
+				  <li>7</li>
+				  <li>8</li>
+				  <li>9</li>
+				  <li><span class="active">10</span></li>
+				  <li>11</li>
+				  <li>12</li>
+				  <li>13</li>
+				  <li>14</li>
+				  <li>15</li>
+				  <li>16</li>
+				  <li>17</li>
+				  <li>18</li>
+				  <li>19</li>
+				  <li>20</li>
+				  <li>21</li>
+				  <li>22</li>
+				  <li>23</li>
+				  <li>24</li>
+				  <li>25</li>
+				  <li>26</li>
+				  <li>27</li>
+				  <li>28</li>
+				  <li>29</li>
+				  <li>30</li>
+				  <li>31</li>
+				</ul>
+				</div>
+
+			</aside>	
+	
+
+
+	<i class="fas fa-arrow-circle-up"></i>
+
+	</body>
+
+</html>

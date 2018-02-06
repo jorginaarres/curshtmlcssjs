@@ -1,0 +1,14 @@
+#main{
+	&.disabled,
+	&:disabled{
+		opacity:10%;
+	}
+	> .container,
+	> .container-fluid{
+		align-items:center;
+	}
+	div{
+		padding-right:0;
+		padding-left:0;
+	}
+}

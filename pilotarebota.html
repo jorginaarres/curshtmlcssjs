@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		html, body{
+			width: 	100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		canvas{
+			margin: 10px;
+			border: 2px solid black;
+		}
+	</style>
+	<script type="text/javascript">
+	var canPilota;
+	var x = 10;
+	var y = 10;
+	var vx = 2;
+	var vy = 3; 	
+	var WIDTH=400;
+	var HEIGHT=400;
+		function init(){
+			canPilota=document.getElementById("pilota").getContext("2d") ;
+			canPilota.fillStyle="rgba(10,150,150,.5)";
+			return setInterval(draw,10);
+		}
+
+		function circle(x,y,r){
+			
+			canPilota.beginPath();
+			canPilota.arc(x,y,r,0,Math.PI*2,true);
+			canPilota.closePath();
+			canPilota.fill();
+		}
+		function clear(){
+			canPilota.clearRect(0,0,WIDTH,HEIGHT)
+		}
+
+		function draw() {
+		  clear();
+		  circle(x, y, 20);
+ 
+		  if (x + 10 + vx > WIDTH || x - 10 + vx < 0)
+		    vx = -vx;
+		  if (y + 10 + vy > HEIGHT || y - 10 + vy < 0)
+		    vy = -vy;	
+		 
+		  x += vx;
+		  y += vy;
+			
+		}
+
+		window.onload=function(){
+		  init();
+		}
+
+	</script>
+</head>
+<body>
+	<canvas id="pilota" width="400" height="400"></canvas>
+
+</body>
+</html>

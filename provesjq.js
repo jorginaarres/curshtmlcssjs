@@ -1,22 +1,21 @@
-$(function(){$( "#divMouse" ).on({
-    mouseenter: function() {
-     
-        console.log( "hovered over a div" );
-    },
-    mouseleave: function() {
-              console.log( "mouse left a div" );
-    },
-    click: function() {
-       
-        console.log( "clicked on a div" );
-    }
-});});
 
-var rotation = $(function (){
-   $("#logoDesarrolloLibre").rotate({
-      angle:0, 
-      animateTo:360, 
-      callback: rotation
-   });
+
+$(window).on("load",function(){
+    $("#b1").click(function(){
+        $( "#x" ).animate({
+                width: "70%",
+                opacity: 0.4,
+                marginLeft: "0.6in",
+                fontSize: "3em",
+                borderWidth: "10px"
+              }, 1500 );
+
+    });
+
+
+        
+
 });
-rotation();
+
+    
+

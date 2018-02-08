@@ -7,41 +7,35 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="accordion.js"></script>
+
 
 <script type="text/javascript" 
 src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
   <script>
-  $( function() {
+  $( function () {
     $( "#accordion" ).accordion();
+
+    $( "#spinner" ).spinner();
+ 
+    
+   
   } );
+
   </script>
+
+
 </head>
 <body>
  
-   <script>
-  $( function() {
-    var spinner = $( "#sel" ).spinner();
- 
-    $( "#disable" ).on( "click", function() {
-      if ( spinner.spinner( "option", "disabled" ) ) {
-        spinner.spinner( "enable" );
-      } else {
-        spinner.spinner( "disable" );
-      }
-    });
-   
- 
-    $( "button" ).button();
-  } );
-   </script>
- <p>
-  <label for="sel">Select a section to modify:</label>
-  <select id="sel">
-    <option value="Section 1" selected="selected">Section1</option>
-    <option value="Section 2">Section2</option>
-  </select>
+
+<p>
+  <label for="spinner">Select a value:</label>
+  <input id="spinner" name="value">
 </p>
+ 
+
 
 <div id="accordion">
 

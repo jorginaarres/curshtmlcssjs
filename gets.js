@@ -1,4 +1,7 @@
-$.get( "https://www.pokeapi.co/api/v2/pokemon/549/",  function( data ) {
+var idd=549;
+
+function getget(){
+  $.get( "https://www.pokeapi.co/api/v2/pokemon/" + idd +"/",  function( data ) {
   // data = data received
   // as we used the "json" argument at the end, data is parsed JSON 
     /*
@@ -11,11 +14,36 @@ $.get( "https://www.pokeapi.co/api/v2/pokemon/549/",  function( data ) {
         would need data.name[2]
   */
   $( "#pok" )  
-    $( "#idp" ) .append(  data.id ) //  2pm
+    $( "#idp" ) .html(  data.id ) //  2pm
     
   
-  $( "#nsp" ).append( "<img src= " + data.sprites.front_shiny + ">" ) 
-  $( "#ssp" ).append( "<img src= " + data.sprites.back_default+ ">" ) 
-  $( "#name" ).append(  data.name ) // John
-  $( "#type" ).append(  data.types[0].type.name ) 
+  $( "#ssp" ).html( "<img src= " + data.sprites.front_shiny + ">" ) 
+  $( "#nsp" ).html( "<img src= " + data.sprites.back_default+ ">" ) 
+  $( "#name" ).html(  data.name ) // John
+  $( "#type" ).html(  data.types[0].type.name ) 
 }, "json" );
+};
+
+ 
+
+$(window).on("load",function(){
+  
+    getget();  
+
+       $("#Last").click(function(){
+      idd= idd-1;
+      getget();
+
+    });
+
+
+    $("#Next").click(function(){
+      idd= idd+1;
+      getget();
+    });
+
+
+});
+
+    
+

@@ -12,7 +12,13 @@
     animation: mymove 5s ;
 	}
 
-	
+	table {
+    border-collapse: collapse;
+	}
+
+	table, td, th {
+    border: 1px solid black;
+	}
 
 /*	@keyframes mymove {
     0%   {top: 0px; background: red; width: 400px;}
@@ -33,9 +39,25 @@
 	</div>
 	<button id="b1" >Boto1</button>
 
-	<div id="pok">
-		
-	</div>
+	<table id="pok">
+			<tr>
+    		<th>ID</th>
+		    <th>Normal sprite</th>
+		    <th>Shiny sprite</th>
+		    <th>Name</th>
+		    <th>Type</th>
+		  </tr>
+		  <tr>
+		    <td id="idp"></td>
+		    <td id= "nsp"></td>
+		      <td id= "ssp"></td>
+		    <td id="name"></td>
+		      <td id="type"></td>
+		   
+
+		  </tr>
+		 
+	</table>
 
 
 </body>

@@ -11,9 +11,11 @@ $.get( "https://www.pokeapi.co/api/v2/pokemon/549/",  function( data ) {
         would need data.name[2]
   */
   $( "#pok" )  
-    .append( "id: " + data.id ) //  2pm
-    .append( "Name: " + data.name ) // John
-  .append( "type: " + data.types[0].type.name ) 
-  .append( "<img src= " + data.sprites.front_female + ">" ) 
+    $( "#idp" ) .append(  data.id ) //  2pm
+    
   
+  $( "#nsp" ).append( "<img src= " + data.sprites.front_shiny + ">" ) 
+  $( "#ssp" ).append( "<img src= " + data.sprites.back_default+ ">" ) 
+  $( "#name" ).append(  data.name ) // John
+  $( "#type" ).append(  data.types[0].type.name ) 
 }, "json" );

@@ -42,7 +42,10 @@ $(window).on("load",function(){
       getget();
     });
 
-
+     $("#Search").click(function(){
+      idd= $("#tt").val();
+      getget();
+    });
 });
 
     

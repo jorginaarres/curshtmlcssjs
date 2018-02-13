@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+	<title>Rutes i excursions</title>
 
-	<head>
-		 	<title>Home</title>
+
 				  <meta charset="UTF-8">
 
 
@@ -24,6 +24,10 @@
 					width: 30%;
 					position: relative;
 					float: right;
+				}
+				.card{
+					margin: 3%;
+					padding: 3%;
 				}
 				
 			</style>
@@ -46,14 +50,14 @@
 		  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		 
+</head>
+<body>
 
-	</head>
-
-	<body>
-		<header>
+	<header>
 			<img src="esterri.jpg" class="img-fluid" alt="Responsive image"  height="50">
-		</header>
-		  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	</header>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			  <a class="navbar-brand" href="#"><img src="escut.png" alt="escut municipi" style="width:24px;height:30px;" > Ajuntament d'Esterri d'Àneu</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -62,7 +66,7 @@
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="#">El municipi<span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="PROJECTE.html">El municipi<span class="sr-only">(current)</span></a>
 			      </li>
 			       <li class="nav-item">
 			        <a class="nav-link" href="fires.html">Festes, Fires i Tradicions</a>
@@ -85,18 +89,54 @@
 			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 			    </form>
 			  </div>
-			</nav>
+		</nav>
 
+		<section>
+			
+			<div class="row">
+				 <div class="col-sm-4">
+						<div class="card" >
+						  <img class="card-img-top" src="esterri.jpg" alt="Camí vell de València">
+						  <div class="card-body">
+						    <h5 class="card-title">Camí vell de València</h5>
+						    <p class="card-text"> Dificultat: Moderada-Baixa
+												Característiques del terreny: Mixte,pedres-asfalt
+												Distància: 4,5 Km.
+												Pendent: Moderat-Suau
+							</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  </div>
+						</div>
+				</div>
 
-			<aside>
-				
+				 <div class="col-sm-4">
+						<div class="card">
+						  <img class="card-img-top" src="esterri.jpg" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Camí del riu de son</h5>
+						    <p class="card-text"> Dificultat: Nul.la
+						    					 Característiques del terreny: Mixte, terra-asfalt 
+						    					 Distància: 2 Km. 
+						    					Pendent: Pla</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  </div>
+						</div>
+				</div>
 
-			</aside>	
-	
-
-
-	<i class="fas fa-arrow-circle-up"></i>
-
-	</body>
-
+				 <div class="col-sm-4">
+						<div class="card" >
+						  <img class="card-img-top" src="esterri.jpg" alt="Card image cap">
+						  <div class="card-body">
+						    <h5 class="card-title">Pista del Sequer</h5>
+						    <p class="card-text">Dificultat: Moderada 
+						    					Característiques del terreny: Carretera de pedres,Distància: 2 Km. fins a Escalarre
+						    					Pendent: Pronunciat</p>
+						    <a href="#" class="btn btn-primary">Go somewhere</a>
+						  </div>
+						</div>
+				</div>
+			</div>
+		</section>
+			
+</body>
 </html>
